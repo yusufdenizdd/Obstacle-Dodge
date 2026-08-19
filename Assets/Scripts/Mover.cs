@@ -8,11 +8,23 @@ public class Mover : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        PrintInstructions();
     }
 
     // Update is called once per frame
     void Update()
+    {
+        MovePlayer();
+    }
+
+    void PrintInstructions()
+    {
+        Debug.Log("Merhaba");
+        Debug.Log("wasd veya yön tuşları ile hareket et");
+        Debug.Log("duvarlara çarpma");
+    }
+
+    void MovePlayer()
     {
         float xValue = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
         float yValue = 0.00f;
