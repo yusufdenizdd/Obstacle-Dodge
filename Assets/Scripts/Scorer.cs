@@ -5,19 +5,10 @@ public class Scorer : MonoBehaviour
     int hits;
     void OnCollisionEnter(Collision collision)
     {
-        hits++;
-        Debug.Log("You bumped " + hits + " times");
-
-    }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        if (collision.gameObject.tag != "Hit")
+        {
+            hits++;
+            Debug.Log("You bumped " + hits + " different objects");
+        }
     }
 }

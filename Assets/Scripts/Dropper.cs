@@ -27,7 +27,7 @@ public class Dropper : MonoBehaviour
     {
         //Debug.Log(Time.time + " kadar zaman geçti");
 
-        if (Time.time > timeToWait && hasDropped == false)
+        if (Time.time > dropTime && hasDropped == false)
         {
             Debug.Log("YUKARI BAK!");
             myMeshRenderer.enabled = true;
